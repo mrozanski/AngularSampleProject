@@ -1,12 +1,8 @@
 import {initialCategory} from '../category/category';
 
 class AppController {
-  constructor($log) {
+  constructor() {
     this.category = initialCategory;
-    // this.currentCategory = {
-    //   title: 'Cat 1'
-    // };
-    $log.log(this.category);
   }
 }
 

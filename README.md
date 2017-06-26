@@ -1,5 +1,16 @@
-GLOO SAMPLE PROJECT
-===================
+ANGULAR 1.6 SAMPLE PROJECT
+==========================
+
+I did this as part of a job application process. (Requirements below)
+Based on http://fountainjs.io/ Yeoman Webapp generator using:
+
+* Angular 1.6
+* Angular UI router
+* Babel
+* Webpack
+* Gulp
+* ES6 syntax
+
 
 Sample Project:
 
