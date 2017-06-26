@@ -1,5 +1,5 @@
 import angular from 'angular';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {CategoryService} from './app/category/category';
 import {App} from './app/containers/App';
