@@ -9,5 +9,19 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app', {
       url: '/',
       component: 'app'
+    })
+    .state('category', {
+      url: '/category/:categoryId',
+      component: 'category',
+      params: {
+        categoryId: 'websites'
+      },
+      resolve: {
+        category($log, $transition$) {
+          const params = $transition$.params();
+          $log.log(params);
+          return params.categoryId;
+        }
+      }
     });
 }

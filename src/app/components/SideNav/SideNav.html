@@ -1,8 +1,10 @@
 <section>
   <p>Categories</p>
   <ul>
-    <li
-      ng-repeat="category in $ctrl.categories"
-    >{{category}}</li>
+    <side-nav-item
+      ng-repeat="(categoryKey, categoryItem) in $ctrl.categories"
+      category-item="categoryItem"
+      category-key="categoryKey"
+    ></side-nav-item>
   </ul>
 </section>

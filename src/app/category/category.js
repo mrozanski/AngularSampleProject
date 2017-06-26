@@ -1,7 +1,7 @@
 // Category Services
 
 // Initially selected Category
-export const initialCategory = 0;
+export const initialCategory = 'websites';
 
 // Categories model goes here
 
@@ -16,7 +16,11 @@ export class CategoryService {
 //   }
 
   getCategories() {
-    return ['Websites', 'Books', 'Podcasts'];
+    return {
+      websites: {title: 'Websites'},
+      books: {title: 'Books'},
+      podcasts: {title: 'Podcasts'}
+    };
   }
 
 }
