@@ -3,8 +3,6 @@
 // Initially selected Category
 export const initialCategory = 'websites';
 
-// Categories model goes here
-
 export class CategoryService {
 
 //   addCategory() {
@@ -17,9 +15,9 @@ export class CategoryService {
 
   getCategories() {
     return {
-      websites: {title: 'Websites'},
-      books: {title: 'Books'},
-      podcasts: {title: 'Podcasts'}
+      websites: {title: 'Websites', id: 'websites'},
+      books: {title: 'Books', id: 'books'},
+      podcasts: {title: 'Podcasts', id: 'podcasts'}
     };
   }
 
