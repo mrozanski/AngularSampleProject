@@ -2,13 +2,9 @@
   "dependencies": {
     "angular": "^1.6.2",
     "angular-ui-router": "1.0.0-beta.3",
-    "bootstrap": "^3.3.7"
+    "bootstrap-css-only": "^3.3.7"
   },
   "devDependencies": {
-    "@types/angular": "^1.6.6",
-    "@types/angular-mocks": "^1.5.9",
-    "@types/angular-ui-router": "^1.1.36",
-    "@types/jquery": "^2.0.40",
     "angular-mocks": "^1.6.2",
     "autoprefixer": "^6.7.3",
     "babel-core": "^6.23.1",
