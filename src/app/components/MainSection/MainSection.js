@@ -1,8 +1,9 @@
 class MainSectionController {
 
   /** @ngInject */
-  constructor($log, categoryService) {
+  constructor($log, $state, categoryService) {
     this.$log = $log;
+    this.$state = $state;
     this.categoryService = categoryService;
   }
 
@@ -10,6 +11,10 @@ class MainSectionController {
     // Populate values for the view
     this.categoryList = this.categoryService.getCategories();
     this.currentCategory = this.categoryList[this.category];
+  }
+
+  navigateToNew() {
+    this.$state.go('new');
   }
 
 }

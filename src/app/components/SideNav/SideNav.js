@@ -1,3 +1,5 @@
+import './SideNav.scss';
+
 class SideNavController {
   /** @ngInject */
   constructor(categoryService) {

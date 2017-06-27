@@ -1,16 +1,17 @@
 import angular from 'angular';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 
-import {CategoryService} from './app/category/category';
-import {ResourceService} from './app/resource/resource';
 import {App} from './app/containers/App';
 import {Header} from './app/components/Header/Header';
 import {SideNav} from './app/components/SideNav/SideNav';
 import {SideNavItem} from './app/components/SideNav/SideNavItem';
 import {Category} from './app/components/Category/Category';
+import {CategoryService} from './app/components/Category/CategoryService';
 import {MainSection} from './app/components/MainSection/MainSection';
 import {ResourceList} from './app/components/Resource/ResourceList';
 import {ResourceItem} from './app/components/Resource/ResourceItem';
+import {ResourceCreate} from './app/components/Resource/ResourceCreate';
+import {ResourceService} from './app/components/Resource/ResourceService';
 
 import 'angular-ui-router';
 import routesConfig from './routes';
@@ -29,4 +30,5 @@ angular
   .component('category', Category)
   .component('mainSection', MainSection)
   .component('resourceItem', ResourceItem)
+  .component('resourceCreate', ResourceCreate)
   .component('resourceList', ResourceList);

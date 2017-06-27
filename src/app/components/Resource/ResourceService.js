@@ -1,7 +1,9 @@
 // Resource Services
 
 export class ResourceService {
-  constructor() {
+  /** @ngInject */
+  constructor($log) {
+    this.$log = $log;
     this.vm = {};
     this.vm.websites = [
       {
@@ -46,8 +48,23 @@ export class ResourceService {
       }
     ];
   }
+
   getResources(category) {
     return this.vm[category];
+  }
+
+  save(category, newObj) {
+    this.$log.log('SERVICE - save');
+    this.$log.log(category);
+    this.$log.log(newObj);
+    // Validate category
+
+    // Validate new or Update
+
+    // Update:
+    const index = this.vm[category].findIndex(element => element.id === newObj.id);
+    this.$log.log(index);
+    this.vm[category][index] = newObj;
   }
 
 }

@@ -1,4 +1,4 @@
-import {initialCategory} from '../category/category';
+import {initialCategory} from '../components/Category/CategoryService';
 
 class AppController {
   constructor() {

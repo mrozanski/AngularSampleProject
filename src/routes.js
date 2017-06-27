@@ -23,5 +23,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
           return params.categoryId;
         }
       }
+    })
+    .state('new', {
+      url: '/new',
+      component: 'resourceCreate'
     });
 }

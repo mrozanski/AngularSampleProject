@@ -1,7 +1,11 @@
 ANGULAR 1.6 SAMPLE PROJECT
 ==========================
 
-I did this as part of a job application process. (Requirements below)
+Live version: https://mrozanski.github.io/AngularSampleProject/
+
+
+I did this as part of a job application process. (See below for instructions)
+
 Based on http://fountainjs.io/ Yeoman Webapp generator using:
 
 * Angular 1.6
@@ -12,9 +16,21 @@ Based on http://fountainjs.io/ Yeoman Webapp generator using:
 * ES6 syntax
 
 
-Sample Project:
+##Install
 
-Instructions:
+npm install
+
+
+##Run dev environment
+ 
+ npm run serve
+
+##Build for distribution
+
+npm run build
+
+
+##Assignemnt Instructions:
 
 * Initialize a git repository
 * Create a boilerplate Angular app (v1.x)

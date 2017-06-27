@@ -1,4 +1,10 @@
-<section class="col-xs-12 col-sm-8">
+<section class="col-xs-12 col-sm-7">
   <h2>{{ $ctrl.currentCategory.title }}</h2>
+  <form ng-submit="$ctrl.navigateToNew()">
+    <button class="btn btn-default btn-xs" type="submit">
+      <span class="glyphicon glyphicon-plus"></span>
+      &nbsp;Add new
+    </button>
+  </form>
   <resource-list category="$ctrl.currentCategory.id"></resource-list>
 </section>
