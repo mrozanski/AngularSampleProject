@@ -1,1 +1,4 @@
-<li><a ui-sref="category({ categoryId: $ctrl.categoryKey })">{{ $ctrl.categoryItem.title }}</a></li>
+<a class="btn btn-default nav-button"
+  ui-sref-active="btn-primary"
+  ui-sref="category({ categoryId: $ctrl.categoryKey })"
+  >{{ $ctrl.categoryItem.title }}</a>
