@@ -4,7 +4,14 @@ ANGULAR 1.6 SAMPLE PROJECT
 Live version: https://mrozanski.github.io/AngularSampleProject/
 
 
-I did this as part of a job application process. (See below for instructions)
+I did this as part of a job application process.
+
+I used this exercise to explore Angular 1.5 components (my previous experience was with 1.4).
+Not unusual with Angular, when researcing on 1.5 components, I found extense literature with plenty of different approaches regarding use of framework features, folder structures, techniques in general.
+My personal choices were affected by what parts of what I knew already I wanted to stick to (light controllers, readability, scalable structure) and which ones I wanted to experiment with (ES6 classes, Imports, reusable components, routing with states and components).
+Please checkout my TODO with the all the good stuff I whish I could have include but deprioritized since time is also a factor.
+
+## The Stack
 
 Based on http://fountainjs.io/ Yeoman Webapp generator using:
 
@@ -15,36 +22,27 @@ Based on http://fountainjs.io/ Yeoman Webapp generator using:
 * Gulp
 * ES6 syntax
 
+In addition to that:
 
-##Install
+* Bootstrap (CSS only)
+* gulp-gh-pages to publish on Github pages
+
+## Install
 
 npm install
 
-
-##Run dev environment
+## Run dev environment
  
  npm run serve
 
-##Build for distribution
+## Build for distribution
 
 npm run build
 
 
-##Assignemnt Instructions:
+## Summary of requirements:
 
-* Initialize a git repository
-* Create a boilerplate Angular app (v1.x)
 * Add code that allows a user to manage their favorite learning resources: (websites, books, podcasts, etc.)
 * User should be able to add resources
 * User should be able to edit resources
 * User should be able to remove resources
-* Data persistence is optional
-* Get as creative as you'd like with the functionality and UI
-
-Rules:
-
-* Use as many 3rd party tools as you'd like
-* Add any documentation, questions you had, and thoughts to a README
-* Make sure it is hosted somewhere that can be viewed directly from a browser (GitHub Pages, etc.)
-* Display the depth of your knowledge, including architecture notes
-* Have fun with it!
