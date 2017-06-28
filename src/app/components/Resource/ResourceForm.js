@@ -20,6 +20,12 @@ class ResourceFormController {
     this.onResourceSaved();
   }
 
+  deleteItem(id) {
+    this.$log.log(id);
+    // TODO: Warn user
+    this.resourceService.deleteResource(this.category, id);
+  }
+
 }
 
 export const ResourceForm = {

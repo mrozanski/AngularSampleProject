@@ -50,11 +50,13 @@ export class ResourceService {
   }
 
   getResources(category) {
+    // TODO: Make async
     return this.vm[category];
   }
 
   save(category, newObj) {
-    // Validate category
+    // TODO: Make async
+    // TODO: Validate category
 
     // Validate new or Update
     if (Object.prototype.hasOwnProperty.call(newObj, 'id')) {
@@ -77,6 +79,12 @@ export class ResourceService {
     }));
     newObj.id = newID + 1;
     this.vm[category].push(newObj);
+  }
+
+  deleteResource(category, id) {
+    // TODO: Make async
+    const index = this.vm[category].findIndex(element => element.id === id);
+    this.vm[category].splice(index, 1);
   }
 
 }
