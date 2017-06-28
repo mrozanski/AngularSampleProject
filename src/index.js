@@ -1,7 +1,6 @@
 import angular from 'angular';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 
-import {App} from './app/containers/App';
 import {Header} from './app/components/Header/Header';
 import {SideNav} from './app/components/SideNav/SideNav';
 import {SideNavItem} from './app/components/SideNav/SideNavItem';
@@ -23,7 +22,6 @@ angular
   .config(routesConfig)
   .service('categoryService', CategoryService)
   .service('resourceService', ResourceService)
-  .component('app', App)
   .component('headerComponent', Header)
   .component('sideNav', SideNav)
   .component('sideNavItem', SideNavItem)

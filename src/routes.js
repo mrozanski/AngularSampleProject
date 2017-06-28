@@ -3,28 +3,27 @@ export default routesConfig;
 /** @ngInject */
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
-  $urlRouterProvider.otherwise('/');
+
+  // Default to category state
+  $urlRouterProvider.otherwise('/category/');
+
+  const defaultCategory = 'websites';
 
   $stateProvider
-    .state('app', {
-      url: '/',
-      component: 'app'
-    })
     .state('category', {
       url: '/category/:categoryId',
       component: 'category',
       params: {
-        categoryId: 'websites'
+        categoryId: defaultCategory
       },
       resolve: {
-        category($log, $transition$) {
+        category($log, $transition$, categoryService) {
           const params = $transition$.params();
-          return params.categoryId;
+          if (categoryService.categoryExists(params.categoryId)) {
+            return params.categoryId;
+          }
+          return defaultCategory;
         }
       }
-    })
-    .state('new', {
-      url: '/new',
-      component: 'resourceCreate'
     });
 }

@@ -4,21 +4,20 @@
 export const initialCategory = 'websites';
 
 export class CategoryService {
-
-//   addCategory() {
-
-//   }
-
-//   deleteCategory() {
-
-//   }
-
-  getCategories() {
-    return {
+  constructor() {
+    this.categories = {
       websites: {title: 'Websites', id: 'websites'},
       books: {title: 'Books', id: 'books'},
       podcasts: {title: 'Podcasts', id: 'podcasts'}
     };
+  }
+
+  getCategories() {
+    return this.categories;
+  }
+
+  categoryExists(id) {
+    return this.categories[id];
   }
 
 }
