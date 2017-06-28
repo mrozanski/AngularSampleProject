@@ -11,7 +11,6 @@ import {MainSection} from './app/components/MainSection/MainSection';
 import {ResourceList} from './app/components/Resource/ResourceList';
 import {ResourceItem} from './app/components/Resource/ResourceItem';
 import {ResourceForm} from './app/components/Resource/ResourceForm';
-import {ResourceCreate} from './app/components/Resource/ResourceCreate';
 import {ResourceService} from './app/components/Resource/ResourceService';
 
 import 'angular-ui-router';
@@ -32,5 +31,4 @@ angular
   .component('mainSection', MainSection)
   .component('resourceItem', ResourceItem)
   .component('resourceForm', ResourceForm)
-  .component('resourceCreate', ResourceCreate)
   .component('resourceList', ResourceList);
