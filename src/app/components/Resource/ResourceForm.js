@@ -13,14 +13,11 @@ class ResourceFormController {
     // This allows to apply the changes only if user saves
     // and revert if user cancels
     angular.copy(this.resource, this.tempModel);
-
-    this.$log.log(' FORM! ');
-    this.$log.log(this.category);
-    this.$log.log(this.resource);
   }
 
   saveItem() {
     this.resourceService.save(this.category, this.tempModel);
+    this.onResourceSaved();
   }
 
 }
@@ -30,6 +27,7 @@ export const ResourceForm = {
   controller: ResourceFormController,
   bindings: {
     resource: '<',
-    category: '<'
+    category: '<',
+    onResourceSaved: '&'
   }
 };

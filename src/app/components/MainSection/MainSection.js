@@ -5,6 +5,7 @@ class MainSectionController {
     this.$log = $log;
     this.$state = $state;
     this.categoryService = categoryService;
+    this.displayNew = false;
   }
 
   $onInit() {
@@ -15,6 +16,10 @@ class MainSectionController {
 
   navigateToNew() {
     this.$state.go('new');
+  }
+
+  onResourceSaved() {
+    this.displayNew = false;
   }
 
 }

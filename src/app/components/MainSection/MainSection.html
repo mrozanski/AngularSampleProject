@@ -1,10 +1,19 @@
 <section class="col-xs-12 col-sm-7">
   <h2>{{ $ctrl.currentCategory.title }}</h2>
-  <form ng-submit="$ctrl.navigateToNew()">
-    <button class="btn btn-default btn-xs" type="submit">
+  <button
+      type="button"
+      class="btn btn-xs"
+      ng-class="{'btn-default': !$ctrl.displayNew, 'btn-danger': $ctrl.displayNew}"
+      ng-click="$ctrl.displayNew = !$ctrl.displayNew">
       <span class="glyphicon glyphicon-plus"></span>
-      &nbsp;Add new
+      &nbsp; 
+      {{ $ctrl.displayNew ? 'Cancel' : 'Add New' }}
     </button>
-  </form>
+  <resource-form
+    ng-if="$ctrl.displayNew"
+    category="$ctrl.currentCategory.id"
+    resource=""
+    on-resource-saved="$ctrl.onResourceSaved()"
+  ></resource-form>
   <resource-list category="$ctrl.currentCategory.id"></resource-list>
 </section>

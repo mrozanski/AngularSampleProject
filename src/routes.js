@@ -19,7 +19,6 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       resolve: {
         category($log, $transition$) {
           const params = $transition$.params();
-          $log.log(params);
           return params.categoryId;
         }
       }

@@ -54,17 +54,29 @@ export class ResourceService {
   }
 
   save(category, newObj) {
-    this.$log.log('SERVICE - save');
-    this.$log.log(category);
-    this.$log.log(newObj);
     // Validate category
 
     // Validate new or Update
+    if (Object.prototype.hasOwnProperty.call(newObj, 'id')) {
+      // Update
 
-    // Update:
-    const index = this.vm[category].findIndex(element => element.id === newObj.id);
-    this.$log.log(index);
-    this.vm[category][index] = newObj;
+      const index = this.vm[category].findIndex(element => element.id === newObj.id);
+      if (index === -1) {
+        // Error
+        throw (new Error('Oh-Oh.. ID not found when trying to update resource'));
+      }
+      this.vm[category][index] = newObj;
+      return;
+    }
+
+    // New
+
+    // Find max ID and increment
+    const newID = Math.max.apply(Math, this.vm[category].map(o => {
+      return o.id;
+    }));
+    newObj.id = newID + 1;
+    this.vm[category].push(newObj);
   }
 
 }
