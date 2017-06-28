@@ -72,12 +72,16 @@ export class ResourceService {
     }
 
     // New
-
-    // Find max ID and increment
-    const newID = Math.max.apply(Math, this.vm[category].map(o => {
-      return o.id;
-    }));
-    newObj.id = newID + 1;
+    // Generate ID
+    let newID = 0;
+    if (this.vm[category].length !== 0) {
+      // Find max ID and increment
+      newID = Math.max.apply(Math, this.vm[category].map(o => {
+        return o.id;
+      }));
+      newID++;
+    }
+    newObj.id = newID;
     this.vm[category].push(newObj);
   }
 
