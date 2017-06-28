@@ -1,0 +1,17 @@
+<form ng-submit="$ctrl.saveItem()" class="form-in-place">
+  <div class="form-group">
+    <label class="label-in-place" for="title">Title</label>
+    <input type="text" id="title" ng-model="$ctrl.tempModel.title" class="input-in-place" />
+  </div>
+  <div class="form-group">
+    <label class="label-in-place" for="url">URL</label>
+    <input type="text" id="url" ng-model="$ctrl.tempModel.url" class="input-in-place" />
+  </div>
+  <div class="form-group">
+    <label class="label-in-place" for="author">Author</label>
+    <input type="text" id="author" ng-model="$ctrl.tempModel.author" class="input-in-place" />
+  </div>
+  <div class="form-group">
+    <input type="submit" class="btn btn-success btn-xs" value="Save" />
+  </div>
+</form>
