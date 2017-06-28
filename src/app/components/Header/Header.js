@@ -1,10 +1,5 @@
 import './Header.scss';
 
-class HeaderController {
-  /** @ngInject */
-}
-
 export const Header = {
-  template: require('./Header.html'),
-  controller: HeaderController
+  template: require('./Header.html')
 };
