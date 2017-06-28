@@ -7,9 +7,12 @@ Live version: https://mrozanski.github.io/AngularSampleProject/
 I did this as part of a job application process.
 
 I used this exercise to explore Angular 1.5 components (my previous experience was with 1.4).
-Not unusual with Angular, when researcing on 1.5 components, I found extense literature with plenty of different approaches regarding use of framework features, folder structures, techniques in general.
+
+As unusual with Angular online documentation, there is extense literature with plenty of different approaches regarding use of framework features, folder structures, techniques in general for Angular 1.5.
+
 My personal choices were affected by what parts of what I knew already I wanted to stick to (light controllers, readability, scalable structure) and which ones I wanted to experiment with (ES6 classes, Imports, reusable components, routing with states and components).
-Please checkout my TODO with the all the good stuff I whish I could have include but deprioritized since time is also a factor.
+
+Please checkout my TODO with all the the good stuff I whish I could have included (but deprioritized because time is always a factor).
 
 ## The Stack
 
